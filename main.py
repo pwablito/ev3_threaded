@@ -25,9 +25,9 @@ class CircleDriveBase(DriveBase):
 
 
 def sound(ev3):
-    freq_range = range(100, 500)
     per_freq_duration = 0.1
     while run:
+        freq_range = range(random.randint(0,200), random.randint(200, 1000))
         for i in freq_range:
             ev3.speaker.beep(frequency=i, duration=per_freq_duration)
         for i in reversed(freq_range):
